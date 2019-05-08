@@ -51,6 +51,7 @@ Page({
     wx.openSetting({
       success: () => {
         this.bindCancelOpenSetting();
+        this.chooseLocation();
       }
     });
   },
