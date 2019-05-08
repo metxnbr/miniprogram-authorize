@@ -17,5 +17,13 @@
 }
 
 .usermotto {
-  margin-top: 200px;
+  margin-top: 50px;
+}
+
+.location-wrap {
+  margin-top: 50px;
+}
+
+.choose-location-btn {
+  margin-top: 30rpx;
 }
