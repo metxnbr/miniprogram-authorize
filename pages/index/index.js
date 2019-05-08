@@ -30,7 +30,7 @@ Page({
         });
       },
       fail: error => {
-        authorize("userLocation")
+        authorize("scope.userLocation")
           .then(res => {})
           .catch(e => {
             this.setData({
