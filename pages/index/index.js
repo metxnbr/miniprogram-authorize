@@ -2,13 +2,16 @@
 //获取应用实例
 const app = getApp();
 
+const authorize = require("../../utils/authorize");
+
 Page({
   data: {
     motto: "Hello World",
     userInfo: {},
     hasUserInfo: false,
     canIUse: wx.canIUse("button.open-type.getUserInfo"),
-    address: ""
+    address: "",
+    openSetting: ""
   },
   //事件处理函数
   bindViewTap: function() {
@@ -26,7 +29,29 @@ Page({
           address
         });
       },
-      fail: error => {}
+      fail: error => {
+        authorize("userLocation")
+          .then(res => {})
+          .catch(e => {
+            this.setData({
+              openSetting: "前往开启位置"
+            });
+          });
+      }
+    });
+  },
+
+  bindCancelOpenSetting: function() {
+    this.setData({
+      openSetting: ""
+    });
+  },
+
+  bindOpenSetting: function() {
+    wx.openSetting({
+      success: () => {
+        this.bindCancelOpenSetting();
+      }
     });
   },
 

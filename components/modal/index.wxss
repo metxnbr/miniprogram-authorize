@@ -1,0 +1,50 @@
+.wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+.box {
+  width: 80%;
+  border-radius: 10rpx;
+  background-color: #fff;
+}
+
+.title {
+  line-height: 80rpx;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+  font-weight: bold;
+}
+
+.content {
+  text-align: center;
+  padding: 30rpx;
+  color: #333;
+}
+
+.btn-wrap {
+  display: flex;
+  border-top: 1px solid #ddd;
+  height: 80rpx;
+}
+
+.cancel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+}
+
+.confirm {
+  display: flex;
+  flex: 1;
+  border-left: 1px solid #ddd;
+}

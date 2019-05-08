@@ -16,4 +16,5 @@
     <text wx:if="address" class="address">{{address}}</text>
     <button class="choose-location-btn" bindtap="chooseLocation">打开地图选择地址</button>
   </view>
+  <open-setting-modal content="{{openSetting}}" wx:if="{{openSetting}}" bindopenSetting="bindOpenSetting" bindcancel="bindCancelOpenSetting" />
 </view>
